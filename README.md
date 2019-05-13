@@ -26,7 +26,7 @@ HTML
 
 jQuery(document).ready(function(){
 	var slider = new Slider();
-	slider.init('ul.banners', 'ul.banners li.banner-slide', null, 5000, true, '.banner-gallery-controls');
+	slider.init('ul.banners', 'ul.banners li.banner-slide', null, 5000, true, '.banner-gallery-controls', true);
 });
 ```
 
