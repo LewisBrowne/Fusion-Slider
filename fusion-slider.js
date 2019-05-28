@@ -14,14 +14,6 @@ function Slider() {
         var dragMovement;
         var startX;
 
-        if(draggable == true){
-            if(event.touches != null){
-                jQuery(slide).click(function(e){
-                    e.preventDefault();
-                });
-            }
-        }
-
         jQuery(window).resize(function(){
             fullWidth = jQuery(container).parent().width();
             jQuery(container).css('width', fullWidth);
@@ -80,12 +72,14 @@ function Slider() {
                 jQuery(container).css('transition', 'none');
             });
 
-            jQuery(document).on('mouseup touchend', function(){
+            jQuery(slide).on('mouseup touchend', function(){
                 jQuery(container).css('transition', 'all 300ms');
                 clicking = false;
                 resetTimer();
                 if(dragMovement != null){
-                    if(dragMovement >= fullWidth / 2){
+                    if(dragMovement == 0){
+                        //Do nothing because its a click.
+                    } else if(dragMovement >= fullWidth / 2){
                         slidePosition--;
                         slideChange(slidePosition, imageCount);
                     } else {
