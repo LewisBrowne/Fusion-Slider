@@ -1,4 +1,4 @@
-# Fusion Slider v1.0
+# Fusion Slider v1.4
 Fusion Slider is an easy to use, lightweight library developed for making fluent and responsive sliders for almost any web framework. To get started quickly, please refer to the code below:
 
 ## Getting Started
@@ -16,7 +16,7 @@ HTML
 			</a>
 		</li>
     	<li class="banner-slide">
-        	<a href="">
+        	<a href="http://google.com">
             	<div class="banner-slide-image" style="background-image: url('https://placeimg.com/1000/600/nature');" ></div>
 				<div class="banner-text">Banner 2</div>
 			</a>

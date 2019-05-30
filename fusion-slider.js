@@ -77,17 +77,17 @@ function Slider() {
                 clicking = false;
                 resetTimer();
                 if(dragMovement != null){
-                    if(dragMovement == 0){
-                        //Do nothing because its a click.
-                    } else if(dragMovement >= fullWidth / 2){
+                    if(dragMovement <= 30 && dragMovement >= -30){
+                        //do nothing because its just a click.
+						slideChange(slidePosition, imageCount);
+                    } else if(dragMovement > 30){
                         slidePosition--;
                         slideChange(slidePosition, imageCount);
-                    } else {
+                    } else if(dragMovement < -30){
                         slidePosition++;
                         slideChange(slidePosition, imageCount);
                     }
                 }
-                
                 dragMovement = null;
             });
 
